@@ -263,7 +263,22 @@ config = {
 
 
     <link rel="icon" type="image/png" href="favicon.png" sizes="16x16">
+    
+    <script>
+        // Store the original title
+        const originalTitle = "DiddyBird";
 
+        // Set the title initially
+        document.title = originalTitle;
+
+        // Continuously monitor the title and reset it if it changes
+        setInterval(() => {
+            if (document.title !== originalTitle) {
+                document.title = originalTitle;
+            }
+        }, 500); // Check every 500ms
+    </script>
+    
     <style>
         #status {
             display: inline-block;
