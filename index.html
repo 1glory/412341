@@ -367,6 +367,30 @@ config = {
            right:10px;
            border: 1px solid black;
         }
+        
+        .ad-left, .ad-right {
+            position: absolute;
+            top: 0;
+            width: 120px; /* Adjust the width as desired */
+            height: 100%;
+            background-color: #f1f1f1; /* Optional: background for ads */
+            z-index: 10; /* Ensures it is on top of the game canvas */
+        }
+
+        .ad-left {
+            left: 0;
+        }
+
+        .ad-right {
+            right: 0;
+        }
+
+        .ad-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
     </style>
 
     <script src="https://pygame-web.github.io/archives/0.9//browserfs.min.js"></script>
@@ -383,6 +407,37 @@ config = {
         </div>
     </div>
 
+   <!-- Left Ad -->
+    <div class="ad-left">
+        <div class="ad-container">
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9608356347724846"
+                crossorigin="anonymous"></script>
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-9608356347724846"
+             data-ad-slot="9384594135"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+
+    <!-- Right Ad -->
+    <div class="ad-right">
+        <div class="ad-container">
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9608356347724846"
+                crossorigin="anonymous"></script>
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-9608356347724846"
+             data-ad-slot="9384594135"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div> 
 
     <canvas class="emscripten" id="canvas"
 width="1px"
